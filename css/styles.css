@@ -1,0 +1,248 @@
+:root {
+	--moderateViolet: hsl(263, 55%, 52%);
+	--veryDarkGrayishBlue: hsl(217, 19%, 35%);
+	--veryDarkBlackishBlue: hsl(219, 29%, 14%);
+	--white: hsl(0, 0%, 100%);
+	--lightGray: hsl(0, 0%, 81%);
+	--lightGrayishBlue: hsl(210, 46%, 95%);
+
+	--back: rgb(240, 240, 240);
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	font-family: "Barlow Semi Condensed", sans-serif;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/*General*/
+body {
+	background-color: var(--back);
+}
+
+.container {
+	width: min(90%, 120rem);
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-size: 1.3rem;
+	margin: 0 auto;
+	font-weight: 600;
+}
+
+/*Testimonial*/
+
+.testimonials {
+	display: grid;
+	gap: 2rem;
+	padding: 5rem 0;
+	background-color: var(--lightGrayishBlue);
+}
+
+@media (min-width: 768px) {
+	.testimonials {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: -1;
+		margin: 20rem auto;
+		width: 140rem;
+
+		border-radius: 5px;
+		padding: 15rem 10rem;
+
+		-webkit-box-shadow: -1px 10px 16px 7px rgba(0, 0, 0, 0.14);
+		-moz-box-shadow: -1px 10px 16px 7px rgba(0, 0, 0, 0.14);
+		box-shadow: -1px 10px 16px 7px rgba(0, 0, 0, 0.14);
+	}
+}
+
+.blockquote {
+	border-radius: 1rem;
+	padding: 2.5rem;
+	width: auto;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(227, 227, 227, 1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(227, 227, 227, 1);
+	box-shadow: 10px 10px 5px 0px rgba(227, 227, 227, 1);
+}
+
+.daniel {
+	background-color: var(--moderateViolet);
+	opacity: 98%;
+	position: relative;
+	z-index: 1;
+}
+
+@media (min-width: 768px) {
+	.daniel {
+		grid-column: 1/3;
+		margin: 0 auto;
+	}
+}
+
+.jonathan {
+	background-color: var(--veryDarkGrayishBlue);
+}
+@media (min-width: 768px) {
+	.jonathan {
+		grid-column: 3/4;
+		margin: 0 2rem;
+	}
+}
+
+.jeanette {
+	background-color: var(--white);
+}
+
+@media (min-width: 768px) {
+	.jeanette {
+		grid-row: 2/3;
+		margin: 0 auto;
+	}
+}
+
+.patrick {
+	background-color: var(--veryDarkBlackishBlue);
+}
+@media (min-width: 768px) {
+	.patrick {
+		grid-column: -4/-2;
+		margin: 0 auto;
+	}
+}
+
+.kira {
+	background-color: var(--white);
+}
+
+@media (min-width: 768px) {
+	.kira {
+		grid-column: 4/5;
+		grid-row: -3/-1;
+		margin: 0 auto;
+	}
+}
+
+.blockquote-header {
+	display: flex;
+	align-items: center;
+}
+
+cite {
+	display: flex;
+	gap: 0.2rem;
+	flex-direction: column;
+	color: var(--white);
+	padding-left: 2rem;
+	font-size: 1.2rem;
+	font-style: normal;
+}
+cite span {
+	color: var(--white);
+	opacity: 50%;
+	font-size: 0.9rem;
+}
+
+cite.black {
+	color: var(--veryDarkBlackishBlue);
+}
+
+cite.black span {
+	color: var(--veryDarkBlackishBlue);
+}
+
+.blockquote-header img {
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	height: 3rem;
+}
+
+.daniel::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: -60%;
+	background-image: url(../img/bg-pattern-quotation.svg);
+	background-image: cover;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	z-index: -1;
+}
+
+.blockquote-description {
+	font-weight: 600;
+	font-size: 1.8rem;
+	color: var(--white);
+	text-align: left;
+	margin: 0;
+	padding: 1.3rem 0;
+}
+
+@media (min-width: 768px) {
+	.blockquote-description {
+		padding: 0 auto;
+		margin: 1rem auto;
+		font-size: 2.2rem;
+	}
+}
+
+.blockquote-p {
+	color: var(--white);
+	opacity: 30%;
+	text-align: left;
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin: 0;
+}
+
+@media (min-width: 768px) {
+	.blockquote-p {
+		padding: 0 auto;
+		margin: 0 auto;
+		font-size: 1.6rem;
+	}
+}
+.blockquote-description__black {
+	font-weight: 600;
+	font-size: 1.8rem;
+	color: var(--veryDarkBlackishBlue);
+	text-align: left;
+	margin: 0;
+	padding: 1.3rem 0;
+}
+@media (min-width: 768px) {
+	.blockquote-description__black {
+		padding: 0 auto;
+		margin: 1rem auto;
+		font-size: 2.2rem;
+	}
+}
+
+.blockquote-p__black {
+	color: var(--veryDarkBlackishBlue);
+	opacity: 30%;
+	text-align: left;
+	font-size: 1.2rem;
+	font-weight: 500;
+	padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+	.blockquote-p__black {
+		padding: 0 auto;
+		margin: 0 auto;
+		font-size: 1.6rem;
+		padding: 0 1rem;
+	}
+}
